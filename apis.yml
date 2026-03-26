@@ -35,7 +35,9 @@ apis:
       - Event-Driven
       - Netflix
       - Open Source
-    properties: []
+    properties:
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/openapi/conductor-api.yml
 common:
   - type: Website
     url: https://conductor-oss.org/
