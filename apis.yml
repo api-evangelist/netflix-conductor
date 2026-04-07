@@ -8,12 +8,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Orchestration
-  - Workflows
-  - Microservices
   - Event-Driven
+  - Microservices
   - Netflix
   - Open Source
+  - Orchestration
+  - Workflows
 url: >-
   https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -29,12 +29,12 @@ apis:
       managing distributed process execution.
     humanURL: https://conductor-oss.org/
     tags:
-      - Orchestration
-      - Workflows
-      - Microservices
       - Event-Driven
+      - Microservices
       - Netflix
       - Open Source
+      - Orchestration
+      - Workflows
     properties:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/openapi/conductor-api.yml
