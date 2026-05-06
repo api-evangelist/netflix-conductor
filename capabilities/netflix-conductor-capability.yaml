@@ -1,0 +1,1160 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Netflix Conductor REST API
+  description: The Conductor REST API provides endpoints for managing workflow definitions, executing workflows, handling
+    tasks, and managing metadata in the Conductor microservices orchestration engine.
+  tags:
+  - Netflix
+  - Conductor
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: netflix-conductor
+    baseUri: http://localhost:8080/api
+    description: Netflix Conductor REST API HTTP API.
+    resources:
+    - name: metadata-workflow
+      path: /metadata/workflow
+      operations:
+      - name: listworkflowdefinitions
+        method: GET
+        description: List workflow definitions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: registerworkflowdefinition
+        method: POST
+        description: Register a workflow definition
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateworkflowdefinitions
+        method: PUT
+        description: Update workflow definitions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: metadata-workflow-name
+      path: /metadata/workflow/{name}
+      operations:
+      - name: getworkflowdefinition
+        method: GET
+        description: Get workflow definition
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+        - name: version
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteworkflowdefinition
+        method: DELETE
+        description: Delete a workflow definition
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+        - name: version
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: metadata-taskdefs
+      path: /metadata/taskdefs
+      operations:
+      - name: listtaskdefinitions
+        method: GET
+        description: List task definitions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: registertaskdefinitions
+        method: POST
+        description: Register task definitions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: metadata-taskdefs-tasktype
+      path: /metadata/taskdefs/{taskType}
+      operations:
+      - name: gettaskdefinition
+        method: GET
+        description: Get task definition
+        inputParameters:
+        - name: taskType
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletetaskdefinition
+        method: DELETE
+        description: Delete a task definition
+        inputParameters:
+        - name: taskType
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow
+      path: /workflow
+      operations:
+      - name: startworkflow
+        method: POST
+        description: Start a workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid
+      path: /workflow/{workflowId}
+      operations:
+      - name: getworkflow
+        method: GET
+        description: Get workflow execution
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        - name: includeTasks
+          in: query
+          type: boolean
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: terminateworkflow
+        method: DELETE
+        description: Terminate a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        - name: reason
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-pause
+      path: /workflow/{workflowId}/pause
+      operations:
+      - name: pauseworkflow
+        method: PUT
+        description: Pause a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-resume
+      path: /workflow/{workflowId}/resume
+      operations:
+      - name: resumeworkflow
+        method: PUT
+        description: Resume a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-restart
+      path: /workflow/{workflowId}/restart
+      operations:
+      - name: restartworkflow
+        method: POST
+        description: Restart a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        - name: useLatestDefinitions
+          in: query
+          type: boolean
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-retry
+      path: /workflow/{workflowId}/retry
+      operations:
+      - name: retryworkflow
+        method: POST
+        description: Retry a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        - name: resumeSubworkflowTasks
+          in: query
+          type: boolean
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-rerun
+      path: /workflow/{workflowId}/rerun
+      operations:
+      - name: rerunworkflow
+        method: POST
+        description: Rerun a workflow
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-workflowid-skiptask-taskreferencename
+      path: /workflow/{workflowId}/skiptask/{taskReferenceName}
+      operations:
+      - name: skiptask
+        method: PUT
+        description: Skip a task
+        inputParameters:
+        - name: workflowId
+          in: path
+          type: string
+          required: true
+        - name: taskReferenceName
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: workflow-search
+      path: /workflow/search
+      operations:
+      - name: searchworkflows
+        method: GET
+        description: Search workflows
+        inputParameters:
+        - name: start
+          in: query
+          type: integer
+        - name: size
+          in: query
+          type: integer
+        - name: sort
+          in: query
+          type: string
+        - name: freeText
+          in: query
+          type: string
+        - name: query
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tasks-poll-tasktype
+      path: /tasks/poll/{taskType}
+      operations:
+      - name: polltask
+        method: GET
+        description: Poll for a task
+        inputParameters:
+        - name: taskType
+          in: path
+          type: string
+          required: true
+        - name: workerid
+          in: query
+          type: string
+        - name: domain
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tasks-poll-batch-tasktype
+      path: /tasks/poll/batch/{taskType}
+      operations:
+      - name: batchpolltasks
+        method: GET
+        description: Batch poll for tasks
+        inputParameters:
+        - name: taskType
+          in: path
+          type: string
+          required: true
+        - name: workerid
+          in: query
+          type: string
+        - name: count
+          in: query
+          type: integer
+        - name: timeout
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tasks
+      path: /tasks
+      operations:
+      - name: updatetask
+        method: POST
+        description: Update task status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tasks-taskid
+      path: /tasks/{taskId}
+      operations:
+      - name: gettask
+        method: GET
+        description: Get task details
+        inputParameters:
+        - name: taskId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tasks-queue-sizes
+      path: /tasks/queue/sizes
+      operations:
+      - name: gettaskqueuesizes
+        method: GET
+        description: Get task queue sizes
+        inputParameters:
+        - name: taskType
+          in: query
+          type: array
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: event
+      path: /event
+      operations:
+      - name: listeventhandlers
+        method: GET
+        description: List event handlers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createeventhandler
+        method: POST
+        description: Create event handler
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: netflix-conductor-rest
+    description: REST adapter for Netflix Conductor REST API.
+    resources:
+    - path: /metadata/workflow
+      name: listworkflowdefinitions
+      operations:
+      - method: GET
+        name: listworkflowdefinitions
+        description: List workflow definitions
+        call: netflix-conductor.listworkflowdefinitions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/workflow
+      name: registerworkflowdefinition
+      operations:
+      - method: POST
+        name: registerworkflowdefinition
+        description: Register a workflow definition
+        call: netflix-conductor.registerworkflowdefinition
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/workflow
+      name: updateworkflowdefinitions
+      operations:
+      - method: PUT
+        name: updateworkflowdefinitions
+        description: Update workflow definitions
+        call: netflix-conductor.updateworkflowdefinitions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/workflow/{name}
+      name: getworkflowdefinition
+      operations:
+      - method: GET
+        name: getworkflowdefinition
+        description: Get workflow definition
+        call: netflix-conductor.getworkflowdefinition
+        with:
+          name: rest.name
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/workflow/{name}
+      name: deleteworkflowdefinition
+      operations:
+      - method: DELETE
+        name: deleteworkflowdefinition
+        description: Delete a workflow definition
+        call: netflix-conductor.deleteworkflowdefinition
+        with:
+          name: rest.name
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/taskdefs
+      name: listtaskdefinitions
+      operations:
+      - method: GET
+        name: listtaskdefinitions
+        description: List task definitions
+        call: netflix-conductor.listtaskdefinitions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/taskdefs
+      name: registertaskdefinitions
+      operations:
+      - method: POST
+        name: registertaskdefinitions
+        description: Register task definitions
+        call: netflix-conductor.registertaskdefinitions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/taskdefs/{taskType}
+      name: gettaskdefinition
+      operations:
+      - method: GET
+        name: gettaskdefinition
+        description: Get task definition
+        call: netflix-conductor.gettaskdefinition
+        with:
+          taskType: rest.taskType
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /metadata/taskdefs/{taskType}
+      name: deletetaskdefinition
+      operations:
+      - method: DELETE
+        name: deletetaskdefinition
+        description: Delete a task definition
+        call: netflix-conductor.deletetaskdefinition
+        with:
+          taskType: rest.taskType
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow
+      name: startworkflow
+      operations:
+      - method: POST
+        name: startworkflow
+        description: Start a workflow
+        call: netflix-conductor.startworkflow
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}
+      name: getworkflow
+      operations:
+      - method: GET
+        name: getworkflow
+        description: Get workflow execution
+        call: netflix-conductor.getworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}
+      name: terminateworkflow
+      operations:
+      - method: DELETE
+        name: terminateworkflow
+        description: Terminate a workflow
+        call: netflix-conductor.terminateworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/pause
+      name: pauseworkflow
+      operations:
+      - method: PUT
+        name: pauseworkflow
+        description: Pause a workflow
+        call: netflix-conductor.pauseworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/resume
+      name: resumeworkflow
+      operations:
+      - method: PUT
+        name: resumeworkflow
+        description: Resume a workflow
+        call: netflix-conductor.resumeworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/restart
+      name: restartworkflow
+      operations:
+      - method: POST
+        name: restartworkflow
+        description: Restart a workflow
+        call: netflix-conductor.restartworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/retry
+      name: retryworkflow
+      operations:
+      - method: POST
+        name: retryworkflow
+        description: Retry a workflow
+        call: netflix-conductor.retryworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/rerun
+      name: rerunworkflow
+      operations:
+      - method: POST
+        name: rerunworkflow
+        description: Rerun a workflow
+        call: netflix-conductor.rerunworkflow
+        with:
+          workflowId: rest.workflowId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/{workflowId}/skiptask/{taskReferenceName}
+      name: skiptask
+      operations:
+      - method: PUT
+        name: skiptask
+        description: Skip a task
+        call: netflix-conductor.skiptask
+        with:
+          workflowId: rest.workflowId
+          taskReferenceName: rest.taskReferenceName
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /workflow/search
+      name: searchworkflows
+      operations:
+      - method: GET
+        name: searchworkflows
+        description: Search workflows
+        call: netflix-conductor.searchworkflows
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tasks/poll/{taskType}
+      name: polltask
+      operations:
+      - method: GET
+        name: polltask
+        description: Poll for a task
+        call: netflix-conductor.polltask
+        with:
+          taskType: rest.taskType
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tasks/poll/batch/{taskType}
+      name: batchpolltasks
+      operations:
+      - method: GET
+        name: batchpolltasks
+        description: Batch poll for tasks
+        call: netflix-conductor.batchpolltasks
+        with:
+          taskType: rest.taskType
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tasks
+      name: updatetask
+      operations:
+      - method: POST
+        name: updatetask
+        description: Update task status
+        call: netflix-conductor.updatetask
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tasks/{taskId}
+      name: gettask
+      operations:
+      - method: GET
+        name: gettask
+        description: Get task details
+        call: netflix-conductor.gettask
+        with:
+          taskId: rest.taskId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tasks/queue/sizes
+      name: gettaskqueuesizes
+      operations:
+      - method: GET
+        name: gettaskqueuesizes
+        description: Get task queue sizes
+        call: netflix-conductor.gettaskqueuesizes
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /event
+      name: listeventhandlers
+      operations:
+      - method: GET
+        name: listeventhandlers
+        description: List event handlers
+        call: netflix-conductor.listeventhandlers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /event
+      name: createeventhandler
+      operations:
+      - method: POST
+        name: createeventhandler
+        description: Create event handler
+        call: netflix-conductor.createeventhandler
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: netflix-conductor-mcp
+    transport: http
+    description: MCP adapter for Netflix Conductor REST API for AI agent use.
+    tools:
+    - name: listworkflowdefinitions
+      description: List workflow definitions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.listworkflowdefinitions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registerworkflowdefinition
+      description: Register a workflow definition
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.registerworkflowdefinition
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateworkflowdefinitions
+      description: Update workflow definitions
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.updateworkflowdefinitions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getworkflowdefinition
+      description: Get workflow definition
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.getworkflowdefinition
+      with:
+        name: tools.name
+        version: tools.version
+      inputParameters:
+      - name: name
+        type: string
+        description: name
+        required: true
+      - name: version
+        type: integer
+        description: version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteworkflowdefinition
+      description: Delete a workflow definition
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: netflix-conductor.deleteworkflowdefinition
+      with:
+        name: tools.name
+        version: tools.version
+      inputParameters:
+      - name: name
+        type: string
+        description: name
+        required: true
+      - name: version
+        type: integer
+        description: version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listtaskdefinitions
+      description: List task definitions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.listtaskdefinitions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: registertaskdefinitions
+      description: Register task definitions
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.registertaskdefinitions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettaskdefinition
+      description: Get task definition
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.gettaskdefinition
+      with:
+        taskType: tools.taskType
+      inputParameters:
+      - name: taskType
+        type: string
+        description: taskType
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletetaskdefinition
+      description: Delete a task definition
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: netflix-conductor.deletetaskdefinition
+      with:
+        taskType: tools.taskType
+      inputParameters:
+      - name: taskType
+        type: string
+        description: taskType
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: startworkflow
+      description: Start a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.startworkflow
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getworkflow
+      description: Get workflow execution
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.getworkflow
+      with:
+        workflowId: tools.workflowId
+        includeTasks: tools.includeTasks
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      - name: includeTasks
+        type: boolean
+        description: includeTasks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: terminateworkflow
+      description: Terminate a workflow
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: netflix-conductor.terminateworkflow
+      with:
+        workflowId: tools.workflowId
+        reason: tools.reason
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      - name: reason
+        type: string
+        description: reason
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: pauseworkflow
+      description: Pause a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.pauseworkflow
+      with:
+        workflowId: tools.workflowId
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: resumeworkflow
+      description: Resume a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.resumeworkflow
+      with:
+        workflowId: tools.workflowId
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: restartworkflow
+      description: Restart a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.restartworkflow
+      with:
+        workflowId: tools.workflowId
+        useLatestDefinitions: tools.useLatestDefinitions
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      - name: useLatestDefinitions
+        type: boolean
+        description: useLatestDefinitions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retryworkflow
+      description: Retry a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.retryworkflow
+      with:
+        workflowId: tools.workflowId
+        resumeSubworkflowTasks: tools.resumeSubworkflowTasks
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      - name: resumeSubworkflowTasks
+        type: boolean
+        description: resumeSubworkflowTasks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rerunworkflow
+      description: Rerun a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.rerunworkflow
+      with:
+        workflowId: tools.workflowId
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: skiptask
+      description: Skip a task
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.skiptask
+      with:
+        workflowId: tools.workflowId
+        taskReferenceName: tools.taskReferenceName
+      inputParameters:
+      - name: workflowId
+        type: string
+        description: workflowId
+        required: true
+      - name: taskReferenceName
+        type: string
+        description: taskReferenceName
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: searchworkflows
+      description: Search workflows
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.searchworkflows
+      with:
+        start: tools.start
+        size: tools.size
+        sort: tools.sort
+        freeText: tools.freeText
+        query: tools.query
+      inputParameters:
+      - name: start
+        type: integer
+        description: start
+      - name: size
+        type: integer
+        description: size
+      - name: sort
+        type: string
+        description: sort
+      - name: freeText
+        type: string
+        description: freeText
+      - name: query
+        type: string
+        description: query
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: polltask
+      description: Poll for a task
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.polltask
+      with:
+        taskType: tools.taskType
+        workerid: tools.workerid
+        domain: tools.domain
+      inputParameters:
+      - name: taskType
+        type: string
+        description: taskType
+        required: true
+      - name: workerid
+        type: string
+        description: workerid
+      - name: domain
+        type: string
+        description: domain
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: batchpolltasks
+      description: Batch poll for tasks
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.batchpolltasks
+      with:
+        taskType: tools.taskType
+        workerid: tools.workerid
+        count: tools.count
+        timeout: tools.timeout
+      inputParameters:
+      - name: taskType
+        type: string
+        description: taskType
+        required: true
+      - name: workerid
+        type: string
+        description: workerid
+      - name: count
+        type: integer
+        description: count
+      - name: timeout
+        type: integer
+        description: timeout
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatetask
+      description: Update task status
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.updatetask
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettask
+      description: Get task details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.gettask
+      with:
+        taskId: tools.taskId
+      inputParameters:
+      - name: taskId
+        type: string
+        description: taskId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettaskqueuesizes
+      description: Get task queue sizes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.gettaskqueuesizes
+      with:
+        taskType: tools.taskType
+      inputParameters:
+      - name: taskType
+        type: array
+        description: taskType
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listeventhandlers
+      description: List event handlers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: netflix-conductor.listeventhandlers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createeventhandler
+      description: Create event handler
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: netflix-conductor.createeventhandler
+      outputParameters:
+      - type: object
+        mapping: $.
