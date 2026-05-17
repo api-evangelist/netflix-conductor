@@ -43,7 +43,7 @@ common:
     url: https://conductor-oss.org/
   - type: Documentation
     url: https://docs.conductor-oss.org/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.conductor-oss.org/getting-started
   - type: GitHub
     url: https://github.com/conductor-oss/conductor
