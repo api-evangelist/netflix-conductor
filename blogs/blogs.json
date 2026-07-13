@@ -2,11 +2,13 @@
   "repo": "netflix-conductor",
   "feeds": [
     {
-      "source": "https://conductor-oss.org/blog",
+      "source": "https://github.com/conductor-oss/conductor",
+      "feed_url": "https://github.com/conductor-oss/conductor",
+      "title": "",
       "saved": 0,
-      "error": "404 on listing and webflow redirect target"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:55:56Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
