@@ -36,6 +36,8 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/openapi/conductor-api.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/netflix-conductor-agentic-access.yml
   - type: DomainSecurity
     url: security/netflix-conductor-domain-security.yml
   - type: Website
