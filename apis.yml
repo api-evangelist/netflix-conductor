@@ -5,7 +5,19 @@ description: >-
   coordinating and managing complex distributed processes across multiple services with built-in retries, error
   handling, and observability.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/netflix-conductor.png
 tags:
   - Event-Driven
   - Microservices
@@ -18,23 +30,42 @@ created: '2026-03-26'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: netflix-conductor:netflix-conductor
-    name: Netflix Conductor
-    description: >-
-      Conductor is a microservices orchestration engine originally built at Netflix for running workflows that span
-      across multiple services, providing task management, workflow definitions, and a REST API for managing distributed
-      process execution.
-    humanURL: https://conductor-oss.org/
-    tags:
-      - Event-Driven
-      - Microservices
-      - Netflix
-      - Open Source
-      - Orchestration
-      - Workflows
-    properties:
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/openapi/conductor-api.yml
+- aid: netflix-conductor:netflix-conductor-events-api
+  name: Netflix Conductor Events API
+  description: The Events API from Netflix Conductor — 1 operation(s) for events.
+  humanURL: https://conductor-oss.org/
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/netflix-conductor-events-api-openapi.yml
+- aid: netflix-conductor:netflix-conductor-metadata-api
+  name: Netflix Conductor Metadata API
+  description: The Metadata API from Netflix Conductor — 4 operation(s) for metadata.
+  humanURL: https://conductor-oss.org/
+  tags:
+  - Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/netflix-conductor-metadata-api-openapi.yml
+- aid: netflix-conductor:netflix-conductor-tasks-api
+  name: Netflix Conductor Tasks API
+  description: The Tasks API from Netflix Conductor — 5 operation(s) for tasks.
+  humanURL: https://conductor-oss.org/
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/netflix-conductor-tasks-api-openapi.yml
+- aid: netflix-conductor:netflix-conductor-workflow-api
+  name: Netflix Conductor Workflow API
+  description: The Workflow API from Netflix Conductor — 9 operation(s) for workflow.
+  humanURL: https://conductor-oss.org/
+  tags:
+  - Workflow
+  properties:
+  - type: OpenAPI
+    url: openapi/netflix-conductor-workflow-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/netflix-conductor-agentic-access.yml
