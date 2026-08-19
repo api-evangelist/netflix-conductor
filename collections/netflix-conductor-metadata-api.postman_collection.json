@@ -1,0 +1,964 @@
+{
+  "item": [
+    {
+      "id": "a7d45147-5c4a-4812-a925-4ed9fcdbe94e",
+      "name": "Metadata",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4ef555a4-d13c-4f3f-872a-ce7c7c07994d",
+          "name": "List workflow definitions",
+          "request": {
+            "name": "List workflow definitions",
+            "description": {
+              "content": "Returns all registered workflow definitions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "workflow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6f5ba65f-981c-43bb-af2a-9993f18dd62d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "workflow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"tasks\": [\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"SWITCH\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": true,\n        \"startDelay\": 2419,\n        \"retryCount\": 9339\n      },\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"HUMAN\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": true,\n        \"startDelay\": 1986,\n        \"retryCount\": 9389\n      }\n    ],\n    \"description\": \"string\",\n    \"version\": 2894,\n    \"inputParameters\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputParameters\": {},\n    \"schemaVersion\": 3427,\n    \"restartable\": false,\n    \"workflowStatusListenerEnabled\": false,\n    \"timeoutSeconds\": 5023,\n    \"timeoutPolicy\": \"ALERT_ONLY\",\n    \"failureWorkflow\": \"string\",\n    \"ownerEmail\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"tasks\": [\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"JSON_JQ_TRANSFORM\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": true,\n        \"startDelay\": 1118,\n        \"retryCount\": 8479\n      },\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"EVENT\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": true,\n        \"startDelay\": 1065,\n        \"retryCount\": 2017\n      }\n    ],\n    \"description\": \"string\",\n    \"version\": 8835,\n    \"inputParameters\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputParameters\": {},\n    \"schemaVersion\": 5262,\n    \"restartable\": true,\n    \"workflowStatusListenerEnabled\": false,\n    \"timeoutSeconds\": 2118,\n    \"timeoutPolicy\": \"ALERT_ONLY\",\n    \"failureWorkflow\": \"string\",\n    \"ownerEmail\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f984569-9642-4a6d-b031-923b3b4cc8eb",
+          "name": "Register a workflow definition",
+          "request": {
+            "name": "Register a workflow definition",
+            "description": {
+              "content": "Registers a new workflow definition.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "workflow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"tasks\": [\n    {\n      \"name\": \"<string>\",\n      \"taskReferenceName\": \"<string>\",\n      \"type\": \"<string>\",\n      \"inputParameters\": \"<object>\",\n      \"dynamicTaskNameParam\": \"<string>\",\n      \"caseValueParam\": \"<string>\",\n      \"caseExpression\": \"<string>\",\n      \"decisionCases\": \"<object>\",\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"subWorkflowParam\": \"<object>\",\n      \"optional\": \"<boolean>\",\n      \"startDelay\": \"<integer>\",\n      \"retryCount\": \"<integer>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"taskReferenceName\": \"<string>\",\n      \"type\": \"<string>\",\n      \"inputParameters\": \"<object>\",\n      \"dynamicTaskNameParam\": \"<string>\",\n      \"caseValueParam\": \"<string>\",\n      \"caseExpression\": \"<string>\",\n      \"decisionCases\": \"<object>\",\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"subWorkflowParam\": \"<object>\",\n      \"optional\": \"<boolean>\",\n      \"startDelay\": \"<integer>\",\n      \"retryCount\": \"<integer>\"\n    }\n  ],\n  \"description\": \"<string>\",\n  \"version\": \"<integer>\",\n  \"inputParameters\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"outputParameters\": \"<object>\",\n  \"schemaVersion\": \"<integer>\",\n  \"restartable\": \"<boolean>\",\n  \"workflowStatusListenerEnabled\": \"<boolean>\",\n  \"timeoutSeconds\": \"<long>\",\n  \"timeoutPolicy\": \"<string>\",\n  \"failureWorkflow\": \"<string>\",\n  \"ownerEmail\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "93e6feed-133d-4447-9220-5bbacefffd42",
+              "name": "Workflow definition registered",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "workflow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"tasks\": [\n    {\n      \"name\": \"string\",\n      \"taskReferenceName\": \"string\",\n      \"type\": \"SWITCH\",\n      \"inputParameters\": {},\n      \"dynamicTaskNameParam\": \"string\",\n      \"caseValueParam\": \"string\",\n      \"caseExpression\": \"string\",\n      \"decisionCases\": {},\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subWorkflowParam\": {},\n      \"optional\": true,\n      \"startDelay\": 6710,\n      \"retryCount\": 8384\n    },\n    {\n      \"name\": \"string\",\n      \"taskReferenceName\": \"string\",\n      \"type\": \"EVENT\",\n      \"inputParameters\": {},\n      \"dynamicTaskNameParam\": \"string\",\n      \"caseValueParam\": \"string\",\n      \"caseExpression\": \"string\",\n      \"decisionCases\": {},\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subWorkflowParam\": {},\n      \"optional\": true,\n      \"startDelay\": 3788,\n      \"retryCount\": 3976\n    }\n  ],\n  \"description\": \"<string>\",\n  \"version\": \"<integer>\",\n  \"inputParameters\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"outputParameters\": \"<object>\",\n  \"schemaVersion\": \"<integer>\",\n  \"restartable\": \"<boolean>\",\n  \"workflowStatusListenerEnabled\": \"<boolean>\",\n  \"timeoutSeconds\": \"<long>\",\n  \"timeoutPolicy\": \"<string>\",\n  \"failureWorkflow\": \"<string>\",\n  \"ownerEmail\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "33e22309-e37a-4a21-a9ca-206ac48e4611",
+          "name": "Update workflow definitions",
+          "request": {
+            "name": "Update workflow definitions",
+            "description": {
+              "content": "Updates existing workflow definitions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "workflow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"name\": \"<string>\",\n    \"tasks\": [\n      {\n        \"name\": \"<string>\",\n        \"taskReferenceName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"inputParameters\": \"<object>\",\n        \"dynamicTaskNameParam\": \"<string>\",\n        \"caseValueParam\": \"<string>\",\n        \"caseExpression\": \"<string>\",\n        \"decisionCases\": \"<object>\",\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"subWorkflowParam\": \"<object>\",\n        \"optional\": \"<boolean>\",\n        \"startDelay\": \"<integer>\",\n        \"retryCount\": \"<integer>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"taskReferenceName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"inputParameters\": \"<object>\",\n        \"dynamicTaskNameParam\": \"<string>\",\n        \"caseValueParam\": \"<string>\",\n        \"caseExpression\": \"<string>\",\n        \"decisionCases\": \"<object>\",\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"subWorkflowParam\": \"<object>\",\n        \"optional\": \"<boolean>\",\n        \"startDelay\": \"<integer>\",\n        \"retryCount\": \"<integer>\"\n      }\n    ],\n    \"description\": \"<string>\",\n    \"version\": \"<integer>\",\n    \"inputParameters\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"outputParameters\": \"<object>\",\n    \"schemaVersion\": \"<integer>\",\n    \"restartable\": \"<boolean>\",\n    \"workflowStatusListenerEnabled\": \"<boolean>\",\n    \"timeoutSeconds\": \"<long>\",\n    \"timeoutPolicy\": \"<string>\",\n    \"failureWorkflow\": \"<string>\",\n    \"ownerEmail\": \"<string>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"tasks\": [\n      {\n        \"name\": \"<string>\",\n        \"taskReferenceName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"inputParameters\": \"<object>\",\n        \"dynamicTaskNameParam\": \"<string>\",\n        \"caseValueParam\": \"<string>\",\n        \"caseExpression\": \"<string>\",\n        \"decisionCases\": \"<object>\",\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"subWorkflowParam\": \"<object>\",\n        \"optional\": \"<boolean>\",\n        \"startDelay\": \"<integer>\",\n        \"retryCount\": \"<integer>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"taskReferenceName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"inputParameters\": \"<object>\",\n        \"dynamicTaskNameParam\": \"<string>\",\n        \"caseValueParam\": \"<string>\",\n        \"caseExpression\": \"<string>\",\n        \"decisionCases\": \"<object>\",\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"subWorkflowParam\": \"<object>\",\n        \"optional\": \"<boolean>\",\n        \"startDelay\": \"<integer>\",\n        \"retryCount\": \"<integer>\"\n      }\n    ],\n    \"description\": \"<string>\",\n    \"version\": \"<integer>\",\n    \"inputParameters\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"outputParameters\": \"<object>\",\n    \"schemaVersion\": \"<integer>\",\n    \"restartable\": \"<boolean>\",\n    \"workflowStatusListenerEnabled\": \"<boolean>\",\n    \"timeoutSeconds\": \"<long>\",\n    \"timeoutPolicy\": \"<string>\",\n    \"failureWorkflow\": \"<string>\",\n    \"ownerEmail\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "38366534-fd50-4439-878c-3aad4e0e31fd",
+              "name": "Workflow definitions updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "workflow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"name\": \"string\",\n    \"tasks\": [\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"SWITCH\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": false,\n        \"startDelay\": 8452,\n        \"retryCount\": 2580\n      },\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"HUMAN\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": false,\n        \"startDelay\": 2876,\n        \"retryCount\": 1335\n      }\n    ],\n    \"description\": \"string\",\n    \"version\": 6611,\n    \"inputParameters\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputParameters\": {},\n    \"schemaVersion\": 9999,\n    \"restartable\": false,\n    \"workflowStatusListenerEnabled\": true,\n    \"timeoutSeconds\": 5687,\n    \"timeoutPolicy\": \"TIME_OUT_WF\",\n    \"failureWorkflow\": \"string\",\n    \"ownerEmail\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"tasks\": [\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"INLINE\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": false,\n        \"startDelay\": 141,\n        \"retryCount\": 9716\n      },\n      {\n        \"name\": \"string\",\n        \"taskReferenceName\": \"string\",\n        \"type\": \"FORK_JOIN\",\n        \"inputParameters\": {},\n        \"dynamicTaskNameParam\": \"string\",\n        \"caseValueParam\": \"string\",\n        \"caseExpression\": \"string\",\n        \"decisionCases\": {},\n        \"defaultCase\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        \"forkTasks\": [\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ],\n          [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n            }\n          ]\n        ],\n        \"joinOn\": [\n          \"string\",\n          \"string\"\n        ],\n        \"subWorkflowParam\": {},\n        \"optional\": false,\n        \"startDelay\": 5715,\n        \"retryCount\": 9162\n      }\n    ],\n    \"description\": \"string\",\n    \"version\": 5593,\n    \"inputParameters\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputParameters\": {},\n    \"schemaVersion\": 1492,\n    \"restartable\": false,\n    \"workflowStatusListenerEnabled\": true,\n    \"timeoutSeconds\": 4698,\n    \"timeoutPolicy\": \"TIME_OUT_WF\",\n    \"failureWorkflow\": \"string\",\n    \"ownerEmail\": \"string\"\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c818693a-888a-4aa3-80c4-f4f461352f82",
+          "name": "Get workflow definition",
+          "request": {
+            "name": "Get workflow definition",
+            "description": {
+              "content": "Returns a specific workflow definition by name.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "workflow",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "version",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "310a4d88-aa53-421a-a668-78985e908915",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "workflow",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "version",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"tasks\": [\n    {\n      \"name\": \"string\",\n      \"taskReferenceName\": \"string\",\n      \"type\": \"EVENT\",\n      \"inputParameters\": {},\n      \"dynamicTaskNameParam\": \"string\",\n      \"caseValueParam\": \"string\",\n      \"caseExpression\": \"string\",\n      \"decisionCases\": {},\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subWorkflowParam\": {},\n      \"optional\": true,\n      \"startDelay\": 2585,\n      \"retryCount\": 5642\n    },\n    {\n      \"name\": \"string\",\n      \"taskReferenceName\": \"string\",\n      \"type\": \"DECISION\",\n      \"inputParameters\": {},\n      \"dynamicTaskNameParam\": \"string\",\n      \"caseValueParam\": \"string\",\n      \"caseExpression\": \"string\",\n      \"decisionCases\": {},\n      \"defaultCase\": [\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        },\n        {\n          \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n        }\n      ],\n      \"forkTasks\": [\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ],\n        [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/WorkflowTask detected>\"\n          }\n        ]\n      ],\n      \"joinOn\": [\n        \"string\",\n        \"string\"\n      ],\n      \"subWorkflowParam\": {},\n      \"optional\": false,\n      \"startDelay\": 9465,\n      \"retryCount\": 6081\n    }\n  ],\n  \"description\": \"string\",\n  \"version\": 4656,\n  \"inputParameters\": [\n    \"string\",\n    \"string\"\n  ],\n  \"outputParameters\": {},\n  \"schemaVersion\": 2668,\n  \"restartable\": false,\n  \"workflowStatusListenerEnabled\": false,\n  \"timeoutSeconds\": 4817,\n  \"timeoutPolicy\": \"TIME_OUT_WF\",\n  \"failureWorkflow\": \"string\",\n  \"ownerEmail\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f032c6c8-8c6e-4fa0-829e-eef53e627fef",
+          "name": "Delete a workflow definition",
+          "request": {
+            "name": "Delete a workflow definition",
+            "description": {
+              "content": "Deletes a workflow definition by name and version.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "workflow",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "version",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9306b758-6b4d-425e-8f72-2cc9207bd5d7",
+              "name": "Workflow definition deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "workflow",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "version",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef8def66-0de8-44f9-9f8e-764ab2c04cf6",
+          "name": "List task definitions",
+          "request": {
+            "name": "List task definitions",
+            "description": {
+              "content": "Returns all registered task definitions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "taskdefs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "228387db-35b4-44f1-924a-2039f59fa561",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "taskdefs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"retryCount\": 1917,\n    \"timeoutSeconds\": 1639,\n    \"inputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"timeoutPolicy\": \"ALERT_ONLY\",\n    \"retryLogic\": \"FIXED\",\n    \"retryDelaySeconds\": 9048,\n    \"responseTimeoutSeconds\": 9434,\n    \"concurrentExecLimit\": 8790,\n    \"rateLimitPerFrequency\": 8695,\n    \"rateLimitFrequencyInSeconds\": 1191,\n    \"ownerEmail\": \"string\",\n    \"pollTimeoutSeconds\": 7761\n  },\n  {\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"retryCount\": 7068,\n    \"timeoutSeconds\": 5935,\n    \"inputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"timeoutPolicy\": \"RETRY\",\n    \"retryLogic\": \"FIXED\",\n    \"retryDelaySeconds\": 8274,\n    \"responseTimeoutSeconds\": 6764,\n    \"concurrentExecLimit\": 2027,\n    \"rateLimitPerFrequency\": 7970,\n    \"rateLimitFrequencyInSeconds\": 6531,\n    \"ownerEmail\": \"string\",\n    \"pollTimeoutSeconds\": 5863\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "13cf2659-3e81-4d32-8b53-48f2cb273d5a",
+          "name": "Register task definitions",
+          "request": {
+            "name": "Register task definitions",
+            "description": {
+              "content": "Registers new task definitions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "taskdefs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"retryCount\": \"<integer>\",\n    \"timeoutSeconds\": \"<long>\",\n    \"inputKeys\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"outputKeys\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"timeoutPolicy\": \"<string>\",\n    \"retryLogic\": \"<string>\",\n    \"retryDelaySeconds\": \"<integer>\",\n    \"responseTimeoutSeconds\": \"<long>\",\n    \"concurrentExecLimit\": \"<integer>\",\n    \"rateLimitPerFrequency\": \"<integer>\",\n    \"rateLimitFrequencyInSeconds\": \"<integer>\",\n    \"ownerEmail\": \"<string>\",\n    \"pollTimeoutSeconds\": \"<integer>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"retryCount\": \"<integer>\",\n    \"timeoutSeconds\": \"<long>\",\n    \"inputKeys\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"outputKeys\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"timeoutPolicy\": \"<string>\",\n    \"retryLogic\": \"<string>\",\n    \"retryDelaySeconds\": \"<integer>\",\n    \"responseTimeoutSeconds\": \"<long>\",\n    \"concurrentExecLimit\": \"<integer>\",\n    \"rateLimitPerFrequency\": \"<integer>\",\n    \"rateLimitFrequencyInSeconds\": \"<integer>\",\n    \"ownerEmail\": \"<string>\",\n    \"pollTimeoutSeconds\": \"<integer>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7a60ed87-ad3a-404d-8d9b-2a25009e85be",
+              "name": "Task definitions registered",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "taskdefs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"retryCount\": 9461,\n    \"timeoutSeconds\": 352,\n    \"inputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"timeoutPolicy\": \"TIME_OUT_WF\",\n    \"retryLogic\": \"FIXED\",\n    \"retryDelaySeconds\": 1203,\n    \"responseTimeoutSeconds\": 8882,\n    \"concurrentExecLimit\": 7607,\n    \"rateLimitPerFrequency\": 6754,\n    \"rateLimitFrequencyInSeconds\": 2251,\n    \"ownerEmail\": \"string\",\n    \"pollTimeoutSeconds\": 8431\n  },\n  {\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"retryCount\": 7064,\n    \"timeoutSeconds\": 5055,\n    \"inputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"outputKeys\": [\n      \"string\",\n      \"string\"\n    ],\n    \"timeoutPolicy\": \"TIME_OUT_WF\",\n    \"retryLogic\": \"EXPONENTIAL_BACKOFF\",\n    \"retryDelaySeconds\": 5910,\n    \"responseTimeoutSeconds\": 9095,\n    \"concurrentExecLimit\": 6681,\n    \"rateLimitPerFrequency\": 3249,\n    \"rateLimitFrequencyInSeconds\": 8781,\n    \"ownerEmail\": \"string\",\n    \"pollTimeoutSeconds\": 2756\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d89dbae2-d5fd-4ab1-be40-7cdecda8c20d",
+          "name": "Get task definition",
+          "request": {
+            "name": "Get task definition",
+            "description": {
+              "content": "Returns a specific task definition by name.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "taskdefs",
+                ":taskType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "taskType",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d6a1e5a3-3de0-40e1-b8e8-6af160fce5de",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "taskdefs",
+                    ":taskType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "taskType",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"retryCount\": 2687,\n  \"timeoutSeconds\": 7071,\n  \"inputKeys\": [\n    \"string\",\n    \"string\"\n  ],\n  \"outputKeys\": [\n    \"string\",\n    \"string\"\n  ],\n  \"timeoutPolicy\": \"RETRY\",\n  \"retryLogic\": \"LINEAR_BACKOFF\",\n  \"retryDelaySeconds\": 273,\n  \"responseTimeoutSeconds\": 1807,\n  \"concurrentExecLimit\": 952,\n  \"rateLimitPerFrequency\": 4294,\n  \"rateLimitFrequencyInSeconds\": 19,\n  \"ownerEmail\": \"string\",\n  \"pollTimeoutSeconds\": 828\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f0882d53-ffe5-4b93-92f2-e82117967a91",
+          "name": "Delete a task definition",
+          "request": {
+            "name": "Delete a task definition",
+            "description": {
+              "content": "Deletes a task definition by name.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metadata",
+                "taskdefs",
+                ":taskType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "taskType",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{baseUrl}}",
+                  "key": "baseUrl"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f018a06e-b56f-4392-a379-1ddec925bef0",
+              "name": "Task definition deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metadata",
+                    "taskdefs",
+                    ":taskType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "taskType",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{baseUrl}}",
+                      "key": "baseUrl"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    },
+    {
+      "type": "string",
+      "value": "{{baseUrl}}/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "047fc371-f4a1-4f58-b53d-c6ad917dd817",
+    "name": "Netflix Conductor REST Events Metadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Conductor REST API provides endpoints for managing workflow definitions, executing workflows, handling tasks, and managing metadata in the Conductor microservices orchestration engine.\n\nContact Support:\n Name: Conductor OSS",
+      "type": "text/plain"
+    }
+  }
+}
