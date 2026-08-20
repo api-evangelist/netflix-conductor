@@ -22,6 +22,13 @@ tags:
   - Event-Driven
   - Microservices
   - Netflix
+  - Open-Source
+  - Orchestration
+  - Workflows
+tags_raw:
+  - Event-Driven
+  - Microservices
+  - Netflix
   - Open Source
   - Orchestration
   - Workflows
@@ -35,6 +42,8 @@ apis:
   description: The Events API from Netflix Conductor — 1 operation(s) for events.
   humanURL: https://conductor-oss.org/
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -53,6 +62,8 @@ apis:
   description: The Tasks API from Netflix Conductor — 5 operation(s) for tasks.
   humanURL: https://conductor-oss.org/
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -62,6 +73,8 @@ apis:
   description: The Workflow API from Netflix Conductor — 9 operation(s) for workflow.
   humanURL: https://conductor-oss.org/
   tags:
+  - Workflows
+  tags_raw:
   - Workflow
   properties:
   - type: OpenAPI
