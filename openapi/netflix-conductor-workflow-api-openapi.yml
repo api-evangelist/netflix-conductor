@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Netflix Conductor REST Events Workflow API
+  title: Netflix Conductor REST Workflow API
   description: The Conductor REST API provides endpoints for managing workflow definitions, executing workflows, handling tasks, and managing metadata in the Conductor microservices orchestration engine.
   version: 3.x
   contact:
@@ -243,6 +243,27 @@ paths:
                 $ref: '#/components/schemas/SearchResult'
 components:
   schemas:
+    StartWorkflowRequest:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        version:
+          type: integer
+        correlationId:
+          type: string
+        input:
+          type: object
+        taskToDomain:
+          type: object
+          additionalProperties:
+            type: string
+        externalInputPayloadStoragePath:
+          type: string
+        priority:
+          type: integer
     SearchResult:
       type: object
       properties:
@@ -308,27 +329,6 @@ components:
           format: int64
         workerId:
           type: string
-    StartWorkflowRequest:
-      type: object
-      required:
-      - name
-      properties:
-        name:
-          type: string
-        version:
-          type: integer
-        correlationId:
-          type: string
-        input:
-          type: object
-        taskToDomain:
-          type: object
-          additionalProperties:
-            type: string
-        externalInputPayloadStoragePath:
-          type: string
-        priority:
-          type: integer
     Workflow:
       type: object
       properties:

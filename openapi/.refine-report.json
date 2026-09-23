@@ -1,10 +1,7 @@
 {
   "provider": "netflix-conductor",
   "sources": [
-    "netflix-conductor-events-api-openapi.yml",
-    "netflix-conductor-metadata-api-openapi.yml",
-    "netflix-conductor-tasks-api-openapi.yml",
-    "netflix-conductor-workflow-api-openapi.yml"
+    "_original/conductor-api.yml"
   ],
   "outputs": [
     "netflix-conductor-events-api-openapi.yml",
@@ -15,6 +12,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "conductor-api.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "conductor-api.yml: declared missing tag: Events",
+    "conductor-api.yml: declared missing tag: Metadata",
+    "conductor-api.yml: declared missing tag: Tasks",
+    "conductor-api.yml: declared missing tag: Workflow",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "netflix-conductor-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "netflix-conductor-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "netflix-conductor-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "netflix-conductor-workflow-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
