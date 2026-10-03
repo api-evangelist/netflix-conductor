@@ -243,40 +243,6 @@ paths:
                 $ref: '#/components/schemas/SearchResult'
 components:
   schemas:
-    StartWorkflowRequest:
-      type: object
-      required:
-      - name
-      properties:
-        name:
-          type: string
-        version:
-          type: integer
-        correlationId:
-          type: string
-        input:
-          type: object
-        taskToDomain:
-          type: object
-          additionalProperties:
-            type: string
-        externalInputPayloadStoragePath:
-          type: string
-        priority:
-          type: integer
-    RerunWorkflowRequest:
-      type: object
-      properties:
-        reRunFromWorkflowId:
-          type: string
-        reRunFromTaskId:
-          type: string
-        workflowInput:
-          type: object
-        taskInput:
-          type: object
-        correlationId:
-          type: string
     Workflow:
       type: object
       properties:
@@ -322,6 +288,27 @@ components:
           type: array
           items:
             type: string
+    StartWorkflowRequest:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        version:
+          type: integer
+        correlationId:
+          type: string
+        input:
+          type: object
+        taskToDomain:
+          type: object
+          additionalProperties:
+            type: string
+        externalInputPayloadStoragePath:
+          type: string
+        priority:
+          type: integer
     SearchResult:
       type: object
       properties:
@@ -373,4 +360,17 @@ components:
           type: integer
           format: int64
         workerId:
+          type: string
+    RerunWorkflowRequest:
+      type: object
+      properties:
+        reRunFromWorkflowId:
+          type: string
+        reRunFromTaskId:
+          type: string
+        workflowInput:
+          type: object
+        taskInput:
+          type: object
+        correlationId:
           type: string
