@@ -243,6 +243,92 @@ paths:
                 $ref: '#/components/schemas/SearchResult'
 components:
   schemas:
+    StartWorkflowRequest:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        version:
+          type: integer
+        correlationId:
+          type: string
+        input:
+          type: object
+        taskToDomain:
+          type: object
+          additionalProperties:
+            type: string
+        externalInputPayloadStoragePath:
+          type: string
+        priority:
+          type: integer
+    RerunWorkflowRequest:
+      type: object
+      properties:
+        reRunFromWorkflowId:
+          type: string
+        reRunFromTaskId:
+          type: string
+        workflowInput:
+          type: object
+        taskInput:
+          type: object
+        correlationId:
+          type: string
+    Task:
+      type: object
+      properties:
+        taskId:
+          type: string
+        taskType:
+          type: string
+        status:
+          type: string
+          enum:
+          - IN_PROGRESS
+          - COMPLETED
+          - FAILED
+          - TIMED_OUT
+          - CANCELED
+          - SCHEDULED
+        referenceTaskName:
+          type: string
+        workflowInstanceId:
+          type: string
+        inputData:
+          type: object
+        outputData:
+          type: object
+        scheduledTime:
+          type: integer
+          format: int64
+        startTime:
+          type: integer
+          format: int64
+        endTime:
+          type: integer
+          format: int64
+        retryCount:
+          type: integer
+        pollCount:
+          type: integer
+        callbackAfterSeconds:
+          type: integer
+          format: int64
+        workerId:
+          type: string
+    SearchResult:
+      type: object
+      properties:
+        totalHits:
+          type: integer
+          format: int64
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Workflow'
     Workflow:
       type: object
       properties:
@@ -288,89 +374,3 @@ components:
           type: array
           items:
             type: string
-    StartWorkflowRequest:
-      type: object
-      required:
-      - name
-      properties:
-        name:
-          type: string
-        version:
-          type: integer
-        correlationId:
-          type: string
-        input:
-          type: object
-        taskToDomain:
-          type: object
-          additionalProperties:
-            type: string
-        externalInputPayloadStoragePath:
-          type: string
-        priority:
-          type: integer
-    SearchResult:
-      type: object
-      properties:
-        totalHits:
-          type: integer
-          format: int64
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/Workflow'
-    Task:
-      type: object
-      properties:
-        taskId:
-          type: string
-        taskType:
-          type: string
-        status:
-          type: string
-          enum:
-          - IN_PROGRESS
-          - COMPLETED
-          - FAILED
-          - TIMED_OUT
-          - CANCELED
-          - SCHEDULED
-        referenceTaskName:
-          type: string
-        workflowInstanceId:
-          type: string
-        inputData:
-          type: object
-        outputData:
-          type: object
-        scheduledTime:
-          type: integer
-          format: int64
-        startTime:
-          type: integer
-          format: int64
-        endTime:
-          type: integer
-          format: int64
-        retryCount:
-          type: integer
-        pollCount:
-          type: integer
-        callbackAfterSeconds:
-          type: integer
-          format: int64
-        workerId:
-          type: string
-    RerunWorkflowRequest:
-      type: object
-      properties:
-        reRunFromWorkflowId:
-          type: string
-        reRunFromTaskId:
-          type: string
-        workflowInput:
-          type: object
-        taskInput:
-          type: object
-        correlationId:
-          type: string
