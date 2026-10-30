@@ -1,4 +1,4 @@
-# Netflix Conductor (netflix-conductor)
+# Netflix Conductor
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,58 +66,121 @@
 
 Conductor is a microservices orchestration platform originally created by Netflix, providing a workflow engine for coordinating and managing complex distributed processes across multiple services with built-in retries, error handling, and observability.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/apis.yml)
+**Areas:** Event-Driven · Microservices · Netflix · Open Source · Orchestration · Workflows
 
-## Scope
+## Netflix Conductor on APIs.io
 
-- **Type:** Index
+Everything profiled for Netflix Conductor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/netflix-conductor/](https://apis.io/providers/netflix-conductor/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Event-Driven
-- Microservices
-- Netflix
-- Open Source
-- Orchestration
-- Workflows
+- [Netflix Conductor Events API](https://apis.io/apis/netflix-conductor/netflix-conductor-events-api/) — The Events API from Netflix Conductor — 1 operation(s) for events.
+- [Netflix Conductor Metadata API](https://apis.io/apis/netflix-conductor/netflix-conductor-metadata-api/) — The Metadata API from Netflix Conductor — 4 operation(s) for metadata.
+- [Netflix Conductor Tasks API](https://apis.io/apis/netflix-conductor/netflix-conductor-tasks-api/) — The Tasks API from Netflix Conductor — 5 operation(s) for tasks.
+- [Netflix Conductor Workflow API](https://apis.io/apis/netflix-conductor/netflix-conductor-workflow-api/) — The Workflow API from Netflix Conductor — 9 operation(s) for workflow.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-26
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Netflix Conductor
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Conductor is a microservices orchestration engine originally built at Netflix for running workflows that span across multiple services, providing task management, workflow definitions, and a REST API for managing distributed process execution.
+- [Netflix Conductor Agentic Access](https://apis.io/agentic-access/netflix-conductor/netflix-conductor-agentic-access/)
 
-- **Human URL:** [https://conductor-oss.org/](https://conductor-oss.org/)
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Event-Driven
-- Microservices
-- Netflix
-- Open Source
-- Orchestration
-- Workflows
+- [Netflix Conductor REST API](https://apis.io/collections/netflix-conductor/open-conductor-api/)
+- [Netflix Conductor REST Events API](https://apis.io/collections/netflix-conductor/open-netflix-conductor-events-api/)
+- [Netflix Conductor REST Events Metadata API](https://apis.io/collections/netflix-conductor/open-netflix-conductor-metadata-api/)
+- [Netflix Conductor REST Events Tasks API](https://apis.io/collections/netflix-conductor/open-netflix-conductor-tasks-api/)
+- [Netflix Conductor REST Events Workflow API](https://apis.io/collections/netflix-conductor/open-netflix-conductor-workflow-api/)
 
-#### Properties
+#### Security (1)
 
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/netflix-conductor/refs/heads/main/openapi/conductor-api.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/conductor-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/conductor-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Netflix Conductor Domain Security](https://apis.io/security/netflix-conductor/netflix-conductor-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Netflix Conductor Plans Pricing](https://apis.io/plans/netflix-conductor/netflix-conductor-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Netflix Conductor Rate Limits](https://apis.io/rate-limits/netflix-conductor/netflix-conductor-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Netflix Conductor Finops](https://apis.io/finops/netflix-conductor/netflix-conductor-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://conductor-oss.org/)
 - [Documentation](https://docs.conductor-oss.org/)
-- [Getting Started](https://docs.conductor-oss.org/getting-started)
-- [Git Hub](https://github.com/conductor-oss/conductor)
+- [Getting started](https://docs.conductor-oss.org/getting-started)
 - [Blog](https://conductor-oss.org/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 44.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/netflix-conductor/](https://apis.io/providers/netflix-conductor/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Netflix Conductor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/netflix-conductor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
